@@ -1,0 +1,19 @@
+
+{{#if values}}
+<div class="container">
+    {{#each values as |v|}}
+        <div class="media">
+            <img class="mr-3" src="{{v.imageUrl}}" alt="Generic placeholder image">
+            <div class="media-body">
+                <p>{{v._id}}</p>
+                <p>{{v.uid}}</p>
+                <p>{{v.name}}</p>
+                <p>{{v.description}}</p>
+                <p>{{v.imageUrl}}</p>
+                <p>{{v.price}}</p>
+                <p>{{v.quantity:}}</p>
+            </div>
+        </div>
+    {{/each}}
+</div>
+{{/if}}

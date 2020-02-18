@@ -1,10 +1,9 @@
 const router = require('express').Router();
-router.get('/', async (req,res)=>{
-    res.send("products");
-});
+let productController = require('../controllers/product.controller');
+const auth = require('../middleware/auth');
 
-router.get('/:id/', async (req, res) => {
-    res.send("product id");
-   });
+router.get('/', productController.read);
+
+router.get('/:id/',auth, productController.readById);
    
 module.exports = router;

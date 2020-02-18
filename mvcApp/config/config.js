@@ -10,7 +10,7 @@ module.exports = {
     dbName: process.env.DB_NAME,
     dbCluster: process.env.DB_CLUSTER,
     get dbUrl() {
-        return `mongodb+srv://${this.dbUser}:${this.dbPassword}@${this.dbCluster}.mongodb.net/${this.dbName}?retryWrites=true&w=majority`
+        return `mongodb+srv://${this.dbUser}:${this.dbPassword}@${this.dbCluster}-okaum.mongodb.net/${this.dbName}?retryWrites=true&w=majority`
     },
     //si se desea algo especifico
     production: {
